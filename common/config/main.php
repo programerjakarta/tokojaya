@@ -5,5 +5,12 @@ return [
         'cache' => [
             'class' => 'yii\caching\FileCache',
         ],
+        'view' => [
+         'theme' => [
+             'pathMap' => [
+                '@app/views' => '@app/views'
+             ],
+         ],
+    ],
     ],
 ];
