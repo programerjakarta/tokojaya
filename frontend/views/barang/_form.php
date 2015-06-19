@@ -16,6 +16,8 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'nmbarang')->textInput(['maxlength' => true]) ?>
 
+    <?= $form->field($model, 'hrgbarang')->textInput() ?>
+
     <?= $form->field($model, 'ketbarang')->textarea(['rows' => 6]) ?>
 
     <div class="form-group">

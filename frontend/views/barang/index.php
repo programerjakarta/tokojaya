@@ -28,6 +28,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'idbarang',
             'idkategori',
             'nmbarang',
+            'hrgbarang',
             'ketbarang:ntext',
 
             ['class' => 'yii\grid\ActionColumn'],

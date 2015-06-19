@@ -21,6 +21,8 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'nmbarang') ?>
 
+    <?= $form->field($model, 'hrgbarang') ?>
+
     <?= $form->field($model, 'ketbarang') ?>
 
     <div class="form-group">

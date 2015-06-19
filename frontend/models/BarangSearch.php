@@ -18,7 +18,7 @@ class BarangSearch extends Barang
     public function rules()
     {
         return [
-            [['idbarang', 'idkategori'], 'integer'],
+            [['idbarang', 'idkategori', 'hrgbarang'], 'integer'],
             [['nmbarang', 'ketbarang'], 'safe'],
         ];
     }
@@ -58,6 +58,7 @@ class BarangSearch extends Barang
         $query->andFilterWhere([
             'idbarang' => $this->idbarang,
             'idkategori' => $this->idkategori,
+            'hrgbarang' => $this->hrgbarang,
         ]);
 
         $query->andFilterWhere(['like', 'nmbarang', $this->nmbarang])

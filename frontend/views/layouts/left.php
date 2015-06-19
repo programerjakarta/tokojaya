@@ -34,6 +34,16 @@ use yii\bootstrap\Nav;
 
         <ul class="sidebar-menu">
         <li class="header">Menu</li>
+         <li class="treeview">
+                <a href="#">
+                    <i class="fa fa-share"></i> <span> Transaksi</span>
+                    <i class="fa fa-angle-left pull-right"></i>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="<?= \yii\helpers\Url::to(['/transaksi/create']) ?>"><span class="fa fa-dropbox"></span> Rekam Penjualan</a></li>
+                    <li><a href="<?= \yii\helpers\Url::to(['/transaksi/beli']) ?>"><span class="fa fa-dropbox"></span> Rekam Pembelian</a></li>
+                </ul>
+            </li>
             <li class="treeview">
                 <a href="#">
                     <i class="fa fa-share"></i> <span> Data</span>

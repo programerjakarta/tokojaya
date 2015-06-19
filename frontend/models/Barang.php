@@ -10,6 +10,7 @@ use Yii;
  * @property integer $idbarang
  * @property integer $idkategori
  * @property string $nmbarang
+ * @property integer $hrgbarang
  * @property string $ketbarang
  *
  * @property Kategoribarang $idbarang0
@@ -31,8 +32,8 @@ class Barang extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['idkategori', 'nmbarang'], 'required'],
-            [['idkategori'], 'integer'],
+            [['idkategori', 'nmbarang', 'hrgbarang'], 'required'],
+            [['idkategori', 'hrgbarang'], 'integer'],
             [['ketbarang'], 'string'],
             [['nmbarang'], 'string', 'max' => 45]
         ];
@@ -47,6 +48,7 @@ class Barang extends \yii\db\ActiveRecord
             'idbarang' => 'Idbarang',
             'idkategori' => 'Idkategori',
             'nmbarang' => 'Nmbarang',
+            'hrgbarang' => 'Hrgbarang',
             'ketbarang' => 'Ketbarang',
         ];
     }
