@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "838c20b58dd7af47bebe59c6ce80a4fa",
+    "hash": "f8acad6a77ed24be15d3a833f036dbd5",
     "packages": [
         {
             "name": "almasaeed2010/adminlte",
@@ -803,17 +803,55 @@
             "time": "2015-06-17 17:16:38"
         },
         {
-            "name": "rmrevin/yii2-fontawesome",
-            "version": "2.10.1",
+            "name": "omnilight/yii2-shopping-cart",
+            "version": "1.2.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/rmrevin/yii2-fontawesome.git",
-                "reference": "4315b9a83343fb2217a0018d974e9dbeb2d34a1d"
+                "url": "https://github.com/omnilight/yii2-shopping-cart.git",
+                "reference": "a353090bd8db052fcda677df543d4b268753d1b0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rmrevin/yii2-fontawesome/zipball/4315b9a83343fb2217a0018d974e9dbeb2d34a1d",
-                "reference": "4315b9a83343fb2217a0018d974e9dbeb2d34a1d",
+                "url": "https://api.github.com/repos/omnilight/yii2-shopping-cart/zipball/a353090bd8db052fcda677df543d4b268753d1b0",
+                "reference": "a353090bd8db052fcda677df543d4b268753d1b0",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.0",
+                "yiisoft/yii2": "*"
+            },
+            "type": "yii2-extension",
+            "autoload": {
+                "psr-4": {
+                    "yz\\shoppingcart\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "Pavel Agalecky",
+                    "email": "pavel.agalecky@gmail.com"
+                }
+            ],
+            "description": "Yii2 extension that adds shopping cart functions",
+            "keywords": [
+                "shopping cart",
+                "yii"
+            ],
+            "time": "2015-06-18 09:17:41"
+        },
+        {
+            "name": "rmrevin/yii2-fontawesome",
+            "version": "2.10.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/rmrevin/yii2-fontawesome.git",
+                "reference": "2f083b0a5488c4e5f17970ecef3a741cbcf95ea4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/rmrevin/yii2-fontawesome/zipball/2f083b0a5488c4e5f17970ecef3a741cbcf95ea4",
+                "reference": "2f083b0a5488c4e5f17970ecef3a741cbcf95ea4",
                 "shasum": ""
             },
             "require": {
@@ -852,7 +890,7 @@
                 "font",
                 "yii"
             ],
-            "time": "2015-05-09 08:36:03"
+            "time": "2015-06-19 12:13:33"
         },
         {
             "name": "swiftmailer/swiftmailer",

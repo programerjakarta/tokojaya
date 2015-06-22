@@ -4,6 +4,7 @@ namespace frontend\controllers;
 
 use Yii;
 use frontend\models\Penjualan;
+use frontend\models\Detilpenjualan;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
@@ -12,20 +13,26 @@ class TransaksiController extends \yii\web\Controller
 {
     public function actionIndex()
     {
-        return $this->render('index');
+        // $model = [
+        //     'username' => 'arif'
+        // ];
+        return $this->render('index', [
+             'model' => $model,
+            ]);
     }
 
     public function actionCreate()
     {
-        $model = new Penjualan();
-
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->idpelanggan]);
-        } else {
-            return $this->render('create', [
-                'model' => $model,
-            ]);
+        $count = count(Yii::$app->request->post('Setting', []));
+        $settings = [new Detilpenjualan()];
+        for($i = 1; $i < $count; $i++) {
+            $settings[] = new Detilpenjualan();
         }
+
+     return $this->render('create', [
+         // 'model' => $model,
+        ]);
+
     }
 
 }
