@@ -1,36 +1,22 @@
 <?php
+
 use yii\helpers\Html;
-use kartik\widgets\ActiveForm;
+
+
 /* @var $this yii\web\View */
-?>
-<?php 
-$this->title = 'Input Transaksi Penjualan';
-$this->params['breadcrumbs'][] = ['label' => 'Transaksi', 'url' => ['index']];
+/* @var $model frontend\models\Penjualan */
+
+$this->title = 'Create Penjualan';
+$this->params['breadcrumbs'][] = ['label' => 'Penjualans', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
- ?>
-<?php $form = ActiveForm::begin();
- ?>
-<div class="table-responsive">
-	<table class="table table-hover table-condensed table-stripped">
-		<thead>
-			<tr>
-				<th>No.</th>
-				<th>Nama Barang</th>
-				<th>Jumlah</th>
-				<th>Harga Satuan</th>
-				<th>Total</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr>
-				<td><?= Html::input('text', 'username[]', '', ['class' => 'form-control']) ?></td>
-				<td><?= Html::input('text', 'username', '', ['class' => 'form-control']) ?></td>
-				<td><?= Html::input('text', 'username', '', ['class' => 'form-control']) ?></td>
-				<td><?= Html::input('text', 'username', '', ['class' => 'form-control']) ?></td>
-				<td><?= Html::input('text', 'username', '', ['class' => 'form-control']) ?></td>
-			</tr>
-		</tbody>
-	</table>
-	<?php ActiveForm::end();
- ?>
+?>
+<div class="penjualan-create">
+
+    <h1><?= Html::encode($this->title) ?></h1>
+
+    <?= $this->render('_form', [
+        'modelPenjualan' => $modelPenjualan,
+        'modelsDetil' => $modelsDetil,
+    ]) ?>
+
 </div>

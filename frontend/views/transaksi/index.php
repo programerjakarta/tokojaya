@@ -1,32 +1,38 @@
 <?php
+
 use yii\helpers\Html;
-use kartik\widgets\ActiveForm;
+use yii\grid\GridView;
+
 /* @var $this yii\web\View */
-?>
-<?php 
-$this->title = 'Input Transaksi Penjualan';
-$this->params['breadcrumbs'][] = ['label' => 'Transaksi', 'url' => ['index']];
+/* @var $searchModel frontend\models\PenjualanSearch */
+/* @var $dataProvider yii\data\ActiveDataProvider */
+
+$this->title = 'Penjualans';
 $this->params['breadcrumbs'][] = $this->title;
- ?>
-<?php $form = ActiveForm::begin();
- ?>
-<div class="table-responsive">
-	<table class="table table-hover table-condensed table-stripped">
-		<thead>
-			<tr>
-				<th>No.</th>
-				<th>Nama Barang</th>
-				<th>Jumlah</th>
-				<th>Harga Satuan</th>
-				<th>Total</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr>
-				<td><?= Html::input('text', 'username', $user->name, ['class' => $username]) ?></td>
-			</tr>
-		</tbody>
-	</table>
-	<?php ActiveForm::end();
- ?>
+?>
+<div class="penjualan-index">
+
+    <h1><?= Html::encode($this->title) ?></h1>
+    <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
+
+    <p>
+        <?= Html::a('Create Penjualan', ['create'], ['class' => 'btn btn-success']) ?>
+    </p>
+
+    <?= GridView::widget([
+        'dataProvider' => $dataProvider,
+        'filterModel' => $searchModel,
+        'columns' => [
+            ['class' => 'yii\grid\SerialColumn'],
+
+            'idpenjualan',
+            'tglpenjualan',
+            'jmlbarang',
+            'ttlbayar',
+            'idpelanggan',
+
+            ['class' => 'yii\grid\ActionColumn'],
+        ],
+    ]); ?>
+
 </div>
